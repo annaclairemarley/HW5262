@@ -30,6 +30,8 @@ calc_extreme_rain_anom = function(rain) {
     as.numeric()
 
   return(list(max_year = max_anom_rain_year,
-              max_anom = max_anom_rain))
+              max_anom = max_anom_rain,
+              min_year = min_anom_rain_year,
+              min_anom = min_anom_rain))
 
 }

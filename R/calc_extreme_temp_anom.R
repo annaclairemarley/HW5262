@@ -28,15 +28,9 @@ calc_extreme_temp_anom = function(temp) {
     select(Date) %>%
     as.numeric()
 
-  # results matrix
-  results_matrix = matrix(
-    c(max_anom_temp_year, max_anom_temp, min_anom_temp_year, min_anom_temp),
-    nrow = 2,
-    ncol = 2,
-    byrow = TRUE
-  )
-   rownames(results_matrix) = c("Maximum", "Minimum")
-  colnames(results_matrix) = c("Year", "Anomaly")
 
-  return(results = results_matrix)
+  return(list(max_year = max_anom_temp_year,
+              max_temp_anomaly = max_anom_temp,
+              min_year = min_anom_temp_year,
+              min_temp_anomaly = min_anom_temp))
 }
