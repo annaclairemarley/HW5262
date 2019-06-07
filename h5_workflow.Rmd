@@ -1,0 +1,45 @@
+---
+title: "Workflow"
+author: "AnnaClaire Marley"
+date: "6/5/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(devtools)
+library(roxygen2)
+library(usethis)
+```
+
+```{r}
+# load the data
+temp <- read_csv("temp.csv")
+rain <- read_csv("precipitation.csv")
+
+```
+
+```{r}
+# store the data
+use_data(temp, pkg = HW5262, overwrite = TRUE)
+use_data(rain, pkg = HW5262, overwrite = TRUE)
+
+```
+
+```{r}
+#source('R/calc_extreme_anom.R')
+calc_extreme_anom(temp, rain)
+calc_extreme_temp_anom(temp)
+calc_extreme_rain_anom(rain)
+```
+
+*Note to self*: How to make set up testing on a new package
+- library(usethis)
+- usethis::use_test()
+- usethis::use_test("function")
+
+
+
+
+
