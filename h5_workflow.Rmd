@@ -85,6 +85,8 @@ calc_crop_harvest(ca_temp, 15,.5)
 calc_crop_cost(ca_rain, 10, .5, 1000, 1.50)
 
 ```
+###Testing drought function code and function 
+
 ```{r}
 
 for (i in 1:nrow(temp)) {temp$av[i] = mean(temp$Value[i] + temp$Value[i-1] + temp$Value[i+1])}
