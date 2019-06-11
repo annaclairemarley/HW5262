@@ -2,7 +2,11 @@
 title: "Workflow"
 author: "AnnaClaire Marley"
 date: "6/5/2019"
-output: html_document
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{my-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r setup, include=FALSE}
@@ -105,5 +109,6 @@ calc_if_drought(temp, 0.5, 80, 2000)
 
 
 class(temp$Date)
+
 ```
 
