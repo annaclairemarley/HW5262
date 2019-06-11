@@ -11,6 +11,7 @@ library(tidyverse)
 library(devtools)
 library(roxygen2)
 library(usethis)
+library(testthat)
 ```
 
 ```{r}
