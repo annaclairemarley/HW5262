@@ -58,7 +58,7 @@ locations = c("SB", "LA", "SF","SLO","SD")
 
 ca_temp <- matrix(rain, nrow = 10, ncol = 5,
                        dimnames = list(c(dates), c(locations)))
-
+ 
 
 
 ```
