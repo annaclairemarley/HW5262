@@ -1,10 +1,10 @@
 ---
-title: "my-vignette"
+title: "HW5262-vignette"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{my-vignette}
   %\VignetteEngine{knitr::rmarkdown}
- \usepackage[utf8]{HW5262}
+  %\VignetteEncoding{UTF-8}
 
 ---
 
@@ -18,6 +18,95 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(HW5262)
 
+```
 
+```{r, include = FALSE}
+library(tidyverse)
+```
+
+
+##.Examples
+###Testing drought function code and function 
+
+```{r, error = TRUE}
+# example data
+temp_data =
+    data.frame(
+      Date = c(1895:2019),
+      Value = sample(1:1, 125, replace = T)
+    )
+
+head(temp_data, 10)
+
+# tells you whether there was a drought in the specified year given inputed drought index and threshold value
+calc_if_drought(temp_data, 2, 1, 2000)
+
+
+```
+
+####. Extreme temperature anomalies
+```{r}
+# example data
+temp_test_data =
+    data.frame(
+        Date = c(1:4),
+        Value = c(1:4),
+        Anomaly = c(1:4)
+    )
+temp_test_data
+
+calc_extreme_temp_anom(temp_test_data)
+
+
+```
+
+####. Extreme precipiation anomalies
+```{r, error = TRUE}
+# example data
+rain_test_data =
+    data.frame(
+        Date = c(1:4),
+        Value = c(1:4),
+        Anomaly = c(1:4)
+    )
+rain_test_data
+
+calc_extreme_rain_anom(rain_test_data)
+```
+
+
+####. Crop Harvest
+```{r}
+#create some fake climate data
+#springtime mean temperatures by date and location
+crop_temp = rnorm(500, mean = 16 , sd = 2)
+dates = seq(from = 1920, to = 2010, by = 10)
+locations = c("SB", "LA", "SF","SLO","SD")
+
+ca_temp <- matrix(crop_temp, nrow = 10, ncol = 5, dimnames = list(c(dates), c(locations)))
+
+#what example dataframe would look like 
+ca_temp
+
+# function output: 
+calc_crop_harvest(ca_temp, 15, .5)
+
+```
+
+####. Crop cost
+
+```{r}
+# example dataset
+crop_rain = rnorm(500, mean = 10 , sd = 4)
+dates = seq(from = 1920, to = 2010, by = 10)
+locations = c("SB", "LA", "SF","SLO","SD")
+
+ca_rain <- matrix(crop_rain, nrow = 10, ncol = 5,
+                       dimnames = list(c(dates), c(locations)))
+# example of what data looks like
+ca_rain
+
+#function output
+calc_crop_cost(ca_rain, 10, .5, 1000, 1.50)
 
 ```

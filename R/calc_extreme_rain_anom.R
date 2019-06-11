@@ -16,8 +16,8 @@ calc_extreme_rain_anom = function(rain) {
 
   # find the max temperature anomaly year that it was found
   max_anom_rain_year = rain %>%
-    filter(Anomaly == max_anom_rain) %>%
-    select(Date) %>%
+    dplyr::filter("Anomaly" == max_anom_rain) %>%
+    dplyr::select(Date) %>%
     as.numeric()
 
   # find the min precipitation anomaly
@@ -25,8 +25,8 @@ calc_extreme_rain_anom = function(rain) {
 
   # find the max temperature anomaly year that it was found
   min_anom_rain_year = rain %>%
-    filter(Anomaly == min_anom_rain) %>%
-    select(Date) %>%
+    dplyr::filter("Anomaly" == min_anom_rain) %>%
+    dplyr::select(Date) %>%
     as.numeric()
 
   return(list(max_year = max_anom_rain_year,

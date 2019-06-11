@@ -15,8 +15,8 @@ calc_extreme_temp_anom = function(temp) {
 
   # find the max temperature anomaly year that it was found
   max_anom_temp_year = temp %>%
-    filter(Anomaly == max_anom_temp) %>%
-    select(Date) %>%
+    dplyr::filter("Anomaly" == max_anom_temp) %>%
+    dplyr::select(Date) %>%
     as.numeric()
 
   # find the min temp anomaly
@@ -24,8 +24,8 @@ calc_extreme_temp_anom = function(temp) {
 
   # find the min temperature anomaly year that it was found
   min_anom_temp_year = temp %>%
-    filter(Anomaly == min_anom_temp) %>%
-    select(Date) %>%
+    dplyr::filter("Anomaly" == min_anom_temp) %>%
+    dplyr::select(Date) %>%
     as.numeric()
 
 
