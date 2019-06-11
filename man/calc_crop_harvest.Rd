@@ -7,14 +7,14 @@
 calc_crop_harvest(crop_temp, mean_temp, crop_parameter)
 }
 \arguments{
-\item{crop_temp}{# local temperature dataset}
+\item{crop_temp}{local temperature dataset}
 
-\item{mean_temp}{# enter the mean temp user wants to use}
+\item{mean_temp}{enter the mean temp user wants to use}
 
-\item{crop_parameter}{# crop paramter unique to the crop you want to use}
+\item{crop_parameter}{crop paramter unique to the crop you want to use}
 }
 \value{
-# lists mean temperatures per year first then harvest value per year
+lists mean temperatures per year first then harvest value per year
 }
 \description{
 Calculates the crop changes in harvest using temperature data and crop parameters. Disclaimer: this is a made up function.

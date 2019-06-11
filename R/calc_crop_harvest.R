@@ -2,11 +2,11 @@
 #'
 #' Calculates the crop changes in harvest using temperature data and crop parameters. Disclaimer: this is a made up function.
 #'
-#' @param crop_temp # local temperature dataset
-#' @param mean_temp # enter the mean temp user wants to use
-#' @param crop_parameter # crop paramter unique to the crop you want to use
+#' @param crop_temp local temperature dataset
+#' @param mean_temp enter the mean temp user wants to use
+#' @param crop_parameter crop paramter unique to the crop you want to use
 #'
-#' @return # lists mean temperatures per year first then harvest value per year
+#' @return lists mean temperatures per year first then harvest value per year
 #' @export
 #'
 #' @examples

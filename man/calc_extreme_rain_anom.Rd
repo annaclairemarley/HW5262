@@ -9,6 +9,9 @@ calc_extreme_rain_anom(rain)
 \arguments{
 \item{rain}{}
 }
+\value{
+list of max and min anomalies and their years
+}
 \description{
 computes max and min anomalies and what year these anomalies occured for precipitation
 }

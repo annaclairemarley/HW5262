@@ -1,16 +1,18 @@
 
-#' Title
+#' calc_crop_cost
 #'
-#' @param crop_rain
-#' @param mean_rain
-#' @param risk_parameter
-#' @param total_harvest
-#' @param price
+#' This function will find the anomaly in rainfall, and then calculate the estimate loss or gain in crop harvest and the corresponding value of that crop
 #'
-#' @return
-#' @export
+#' @param crop_rain  data set with rain by year (inches)
+#' @param mean_rain the California average rainfall amount (inches)
+#' @param risk_parameter a paramter that esimates the perentage of crop loss based on deviation from average temperature
+#' @param total_harvest total expected harvest (lbs)
+#' @param price price per poound of harvest
 #'
-#' @examples
+#' @return Estimated crop loss or gain, and the monetary value of that loss or gain
+#'
+#'
+#'
 #'
 calc_crop_cost = function(crop_rain, mean_rain, risk_parameter, total_harvest, price) {
   # calculates the mean temperature for each year across locations

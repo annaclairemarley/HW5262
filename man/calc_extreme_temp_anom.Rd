@@ -9,6 +9,9 @@ calc_extreme_temp_anom(temp)
 \arguments{
 \item{temp}{}
 }
+\value{
+max and min anomalies and the years they occurred in
+}
 \description{
 computes max and min anomalies and what year these anomalies occured for temperature
 }
