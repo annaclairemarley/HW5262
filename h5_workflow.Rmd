@@ -28,8 +28,9 @@ use_data(rain, pkg = HW5262, overwrite = TRUE)
 ```
 
 ```{r}
-#source('R/calc_extreme_anom.R')
-calc_extreme_anom(temp, rain)
+source('R/calc_extreme_temp_anom.R')
+source('R/calc_extreme_rain_anom.R')
+
 calc_extreme_temp_anom(temp)
 calc_extreme_rain_anom(rain)
 ```
@@ -76,8 +77,10 @@ calc_crop_harvest(ca_temp, 15, .5)
 ####. Crop cost
 
 ```{r}
+source('R/calc_crop_harvest.R')
 source('R/calc_crop_cost.R')
 
+calc_crop_harvest(ca_temp, 15,.5)
 calc_crop_cost(ca_rain, 10, .5, 1000, 1.50)
 
 ```
