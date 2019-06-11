@@ -4,7 +4,7 @@
 #'
 #' @param rain
 #'
-#' @return
+#' @return list of max and min anomalies and their years
 #' @export
 #'
 #' @examples

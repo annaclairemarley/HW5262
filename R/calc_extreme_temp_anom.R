@@ -4,7 +4,7 @@
 #'
 #' @param temp
 #'
-#' @return
+#' @return max and min anomalies and the years they occurred in
 #' @export
 #'
 #' @examples
