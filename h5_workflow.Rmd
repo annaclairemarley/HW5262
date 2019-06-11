@@ -49,14 +49,14 @@ crop_temp = rnorm(500, mean = 16 , sd = 2)
 dates = seq(from = 1920, to = 2010, by = 10)
 locations = c("SB", "LA", "SF","SLO","SD")
 
-ca_temp <- matrix(temp, nrow = 10, ncol = 5,
+ca_temp <- matrix(crop_temp, nrow = 10, ncol = 5,
                        dimnames = list(c(dates), c(locations)))
 
 crop_rain = rnorm(500, mean = 10 , sd = 4)
 dates = seq(from = 1920, to = 2010, by = 10)
 locations = c("SB", "LA", "SF","SLO","SD")
 
-ca_temp <- matrix(rain, nrow = 10, ncol = 5,
+ca_rain <- matrix(crop_rain, nrow = 10, ncol = 5,
                        dimnames = list(c(dates), c(locations)))
  
 
@@ -64,4 +64,9 @@ ca_temp <- matrix(rain, nrow = 10, ncol = 5,
 ```
 
 
+```{r}
+source('R/calc_crop_harvest.R')
+calc_crop_harvest(ca_temp, 15, .5)
+
+```
 
