@@ -1,4 +1,3 @@
-
 test_that("crops_equal_one", {
   #fake dataset:
   crop_test = sample(1:1, 500, replace = T)

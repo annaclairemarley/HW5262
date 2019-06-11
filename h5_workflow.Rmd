@@ -11,6 +11,7 @@ library(tidyverse)
 library(devtools)
 library(roxygen2)
 library(usethis)
+library(testthat)
 ```
 
 ```{r}
@@ -28,8 +29,9 @@ use_data(rain, pkg = HW5262, overwrite = TRUE)
 ```
 
 ```{r}
-#source('R/calc_extreme_anom.R')
-calc_extreme_anom(temp, rain)
+source('R/calc_extreme_temp_anom.R')
+source('R/calc_extreme_rain_anom.R')
+
 calc_extreme_temp_anom(temp)
 calc_extreme_rain_anom(rain)
 ```
@@ -76,9 +78,32 @@ calc_crop_harvest(ca_temp, 15, .5)
 ####. Crop cost
 
 ```{r}
+source('R/calc_crop_harvest.R')
 source('R/calc_crop_cost.R')
 
+calc_crop_harvest(ca_temp, 15,.5)
 calc_crop_cost(ca_rain, 10, .5, 1000, 1.50)
 
+```
+###Testing drought function code and function 
+
+```{r}
+
+for (i in 1:nrow(temp)) {temp$av[i] = mean(temp$Value[i] + temp$Value[i-1] + temp$Value[i+1])}
+
+  temp2 = temp %>%
+    mutate("index" = av*0.5) %>%
+    mutate("condition" = ifelse(temp2$index>80, "drought","normal"))
+
+  year_drought <- temp2 %>% 
+    filter(Date == 1960)
+  
+  
+source('R/calc_if_drought.R')
+
+calc_if_drought(temp, 0.5, 80, 2000)
+
+
+class(temp$Date)
 ```
 
