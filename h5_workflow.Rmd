@@ -42,6 +42,16 @@ calc_extreme_rain_anom(rain)
 
 ```{r}
 
+#create some fake climate data
+#springtime mean temperatures by date and location
+
+temp = rnorm(500, mean = 16 , sd = 2)
+dates = seq(from = 1920, to = 2010, by = 10)
+locations = c("SB", "LA", "SF","SLO","SD")
+
+ca_temp <- matrix(temp, nrow = 10, ncol = 5,
+                       dimnames = list(c(dates), c(locations)))
+
 
 
 ```
