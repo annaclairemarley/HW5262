@@ -40,6 +40,11 @@ calc_extreme_rain_anom(rain)
 - usethis::use_test("function")
 
 
+```{r}
+
+
+
+```
 
 
 
