@@ -1,18 +1,14 @@
-
-
 #' calc_if_drought
 #'
 #' This function will return whether a given year of the past was considered a drought year based on the average temperature over the previous three years
 #'
-#' @param temp Dataset with year temperatures for a chosen location
+#' @param temp Dataset with yearly temperatures for a chosen location
 #' @param drought_index Parameter
 #' @param threshold A number above which there has been a drought
 #' @param yr The year of which you are interested in
-#'
-#' @return "drought" or normal
 
-#'
-#' @examples
+
+
 calc_if_drought = function(temp, drought_index, threshold, yr){
   for (i in 1:nrow(temp)) {temp$av[i] = mean(temp$Value[i] + temp$Value[i-1] + temp$Value[i+1])}
 
