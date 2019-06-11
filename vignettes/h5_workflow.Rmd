@@ -26,13 +26,6 @@ rain <- read_csv("precipitation.csv")
 ```
 
 ```{r}
-# store the data
-use_data(temp, pkg = HW5262, overwrite = TRUE)
-use_data(rain, pkg = HW5262, overwrite = TRUE)
-
-```
-
-```{r}
 source('R/calc_extreme_temp_anom.R')
 source('R/calc_extreme_rain_anom.R')
 
