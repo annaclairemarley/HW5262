@@ -3,14 +3,13 @@ Type: Package
 Title: Climate Change Metrics
 Version: 0.1.0
 Author: AnnaClaire Marley and Madeline Berger
-Maintainer: The package maintainer <yourself@somewhere.net>
+Maintainer: The package maintainer <annaclairemarley@gmail.com>
 Description: Calculates different climate change metrics allowing the user to input their owndatasets and parameters
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
 Suggests: 
-    testthat (>= 2.1.0)
-    knitr),
+    testthat (>= 2.1.0),
     rmarkdown,
     knitr
 RoxygenNote: 6.1.1
