@@ -41,7 +41,14 @@ head(temp_data, 10)
 # tells you whether there was a drought in the specified year given inputed drought index and threshold value
 calc_if_drought(temp_data, 2, 1, 2000)
 
+```
 
+
+####. Extreme precipiation anomalies
+```{r, error = TRUE}
+# preloaded data
+data("rain")
+calc_extreme_rain_anom(rain)
 ```
 
 ####. Extreme temperature anomalies
@@ -57,21 +64,6 @@ temp_test_data
 
 calc_extreme_temp_anom(temp_test_data)
 
-
-```
-
-####. Extreme precipiation anomalies
-```{r, error = TRUE}
-# example data
-rain_test_data =
-    data.frame(
-        Date = c(1:4),
-        Value = c(1:4),
-        Anomaly = c(1:4)
-    )
-rain_test_data
-
-calc_extreme_rain_anom(rain_test_data)
 ```
 
 
